@@ -5,13 +5,13 @@ import './navbar.scss';
 
 const Navbar = () => {
   return (
-    <nav>
-      <div>
+    <nav className='navbar'>
+      <div className='navbar__logo'>
         <img src={images.logo} alt='logo' />
       </div>
-      <ul>
+      <ul className='navbar__links'>
         {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
-          <li key={`link-${item}`}>
+          <li key={`link-${item}`} className='app__flex p-text'>
             <div />
             <a href={`#${item}`}>{item}</a>
           </li>
