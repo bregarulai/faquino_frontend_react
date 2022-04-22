@@ -40,9 +40,9 @@ const Header = () => {
       <motion.div
         whileInView={{ opacity: [0, 1] }}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
-        className='header__img'
+        className='header__img-container'
       >
-        <img src={images.profile} alt='profile_bg' />
+        <img className='header__img' src={images.profile} alt='profile_bg' />
         <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: 'easeInOut' }}
@@ -56,7 +56,7 @@ const Header = () => {
         whileInView={scaleVariants.whileInView}
         className='header__circles'
       >
-        {[images.react, images.sass, images.redux].map((item, index) => (
+        {[images.sass, images.react, images.redux].map((item, index) => (
           <div className='header__circle-cmp app__flex' key={`circle-${index}`}>
             <img src={item} alt='circle' />
           </div>
