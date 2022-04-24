@@ -11,7 +11,19 @@ const Work = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [works, setWorks] = useState([]);
   const [filteredWorks, setFilteredWorks] = useState([]);
-  const handleWorkFilter = (item) => {};
+  const handleWorkFilter = (item) => {
+    setActiveFilter(item);
+    setAnimateCard([{ y: 100, opacity: 0 }]);
+
+    setTimeout(() => {
+      setAnimateCard([{ y: 0, opacity: 1 }]);
+      if (item === 'All') {
+        setFilteredWorks(works);
+      } else {
+        setFilteredWorks(works.filter((work) => work.tags.includes(item)));
+      }
+    }, 500);
+  };
   useEffect(() => {
     const query = '*[_type == "works"]';
     client.fetch(query).then((data) => {
