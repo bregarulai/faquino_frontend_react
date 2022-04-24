@@ -31,7 +31,7 @@ const Work = () => {
               key={item + index}
               onClick={() => handleWorkFilter(item)}
               className={`work__filter-item app__flex p-text ${
-                activeFilter === item ? 'work__item-active' : ''
+                activeFilter === item ? 'work__filter-item-active' : ''
               }`}
             >
               {item}
@@ -46,7 +46,7 @@ const Work = () => {
       >
         {filteredWorks.map((work, index) => (
           <div className='work__item app__flex' key={`work-${index}`}>
-            <div className='work__igm app__flex'>
+            <div className='work__img app__flex'>
               <img src={urlFor(work.imgUrl)} alt={work.title} />
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
