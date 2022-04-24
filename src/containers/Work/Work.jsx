@@ -31,7 +31,7 @@ const Work = () => {
               key={item + index}
               onClick={() => handleWorkFilter(item)}
               className={`work__filter-item app__flex p-text ${
-                activeFilter === item ? 'item-active' : ''
+                activeFilter === item ? 'work__item-active' : ''
               }`}
             >
               {item}
