@@ -3,7 +3,7 @@ import ReactTooltip from 'react-tooltip';
 import { motion } from 'framer-motion';
 
 import './skills.scss';
-import { AppWrapper } from '../../wrapper';
+import { AppWrapper, MotionWrapper } from '../../wrapper';
 import { urlFor, client } from '../../client';
 
 const Skills = () => {
@@ -77,4 +77,8 @@ const Skills = () => {
   );
 };
 
-export default AppWrapper(Skills, 'skills');
+export default AppWrapper(
+  MotionWrapper(Skills, 'skills'),
+  'skills',
+  'app__whitebg'
+);

@@ -122,7 +122,8 @@
     }
 
     &__exp-year {
-        margin-right: 3rem;
+        margin-right: 2rem;
+        width: 9rem;
 
         p {
             font-weight: 800;
@@ -130,6 +131,7 @@
         }
 
         @media screen and (max-width: 450px) {
+            width: 8rem;
             margin-right: 1rem;
         }
     }
